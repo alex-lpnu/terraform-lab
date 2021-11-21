@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>2.0"
+      version = "2.86.0"
     }
   }
 }
@@ -139,7 +139,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   location              = "eastus"
   resource_group_name   = azurerm_resource_group.myterraformgroup.name
   network_interface_ids = [azurerm_network_interface.myterraformnic.id]
-  size                  = "Standard_DS1_v2"
+  size                  = "Standard_B1ls"
 
   os_disk {
     name                 = "myOsDisk"
